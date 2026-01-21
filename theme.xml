@@ -77,6 +77,55 @@
             <zIndex>55</zIndex>
         </image>
 
+        <image name="scroll_bar" extra="true">
+            <path>./assets/images/common/scroll_bar.png</path>
+            <pos>0.75 0.95</pos>
+            <origin>0.5 0.5</origin>
+            <size>0.5 0.1</size>
+            <zIndex>1</zIndex>
+        </image>
+
+        <!-- Visibility override -->
+        <helpsystem name="help">
+            <textColor>00000000</textColor>
+            <iconColor>00000000</iconColor>
+        </helpsystem>
+    </view>
+
+    <!-- Main system selection menu -->
+    <view name="system">
+        <!-- Both screens -->
+        <sound name="launch">
+            <path>./assets/sounds/select.wav</path>
+        </sound>
+
+        <!-- Top screen (X 0-0.5) -->
+        <image name="distro_logo" extra="true">
+            <path>./assets/images/common/distro_logo.png</path>
+            <pos>0.25 0.5</pos>
+            <origin>0.5 0.5</origin>
+            <maxSize>0.3 0.6</maxSize>
+            <zIndex>1</zIndex>
+        </image>
+
+        <!-- Bottom screen (X 0.5-1.0) -->
+        <carousel name="systemcarousel">
+            <type>horizontal</type>
+            <pos>0.75 0.64</pos>
+            <origin>0.5 0.5</origin>
+            <size>0.5 0.25</size>
+            <logoSize>0.09 0.15</logoSize>
+            <logoScale>1</logoScale>
+            <color>00000000</color>
+            <maxLogoCount>5</maxLogoCount>
+            <zIndex>50</zIndex>
+            <defaultTransition>instant</defaultTransition>
+            <transitionSpeed>0</transitionSpeed>
+            <scrollSound>./assets/sounds/scroll.wav</scrollSound>
+            <minLogoOpacity>1</minLogoOpacity>
+            <systemInfoDelay>0</systemInfoDelay>
+        </carousel>
+
         <image name="menu_slot0" extra="true">
             <path>./assets/images/common/menu_slot.png</path>
             <pos>0.55 0.65</pos>
@@ -116,55 +165,6 @@
             <maxSize>0.09 0.24</maxSize>
             <zIndex>49</zIndex>            
         </image>
-
-        <image name="scroll_bar" extra="true">
-            <path>./assets/images/common/scroll_bar.png</path>
-            <pos>0.75 0.95</pos>
-            <origin>0.5 0.5</origin>
-            <size>0.5 0.1</size>
-            <zIndex>1</zIndex>
-        </image>
-
-        <!-- Visibility override -->
-        <helpsystem name="help">
-            <textColor>00000000</textColor>
-            <iconColor>00000000</iconColor>
-        </helpsystem>
-    </view>
-
-    <!-- Main system selection menu -->
-    <view name="system">
-        <!-- Both screens -->
-        <sound name="launch">
-            <path>./assets/sounds/select.wav</path>
-        </sound>
-
-        <!-- Top screen (X 0-0.5) -->
-        <image name="distro_logo" extra="true">
-            <path>./assets/images/common/distro_logo.png</path>
-            <pos>0.25 0.5</pos>
-            <origin>0.5 0.5</origin>
-            <maxSize>0.3 0.6</maxSize>
-            <zIndex>1</zIndex>
-        </image>
-
-        <!-- Bottom screen (X 0.5-1.0) -->
-        <carousel name="systemcarousel">
-            <type>horizontal</type>
-            <pos>0.75 0.65</pos>
-            <origin>0.5 0.5</origin>
-            <size>0.5 0.25</size>
-            <logoSize>0.04 0.12</logoSize>
-            <logoScale>1.0</logoScale>
-            <color>00000000</color>
-            <maxLogoCount>5</maxLogoCount>
-            <zIndex>50</zIndex>
-            <defaultTransition>instant</defaultTransition>
-            <transitionSpeed>0</transitionSpeed>
-            <scrollSound>./assets/sounds/scroll.wav</scrollSound>
-            <minLogoOpacity>1</minLogoOpacity>
-            <systemInfoDelay>0</systemInfoDelay>
-        </carousel>
 
         <text name="logoText">
             <fontPath>./assets/fonts/dsi_font.otf</fontPath>
@@ -248,8 +248,8 @@
             <pos>0.75 0.64</pos>
             <origin>0.5 0.5</origin>
             <size>0.5 0.25</size>
-            <logoSize>0.3 0.85</logoSize>
-            <logoScale>0.75</logoScale>
+            <logoSize>0.3 0.5</logoSize>
+            <logoScale>1</logoScale>
             <color>00000000</color>
             <maxLogoCount>5</maxLogoCount>
             <zIndex>50</zIndex>
@@ -257,8 +257,48 @@
             <transitionSpeed>0</transitionSpeed>
             <scrollSound>./assets/sounds/scroll.wav</scrollSound>
             <minLogoOpacity>1</minLogoOpacity>
-            <imageSource>image</imageSource>
+            <imageSource if="${system.hardwareType} == 'System'">image</imageSource>
         </gamecarousel>
+
+        <image name="game_slot0" extra="true">
+            <path>./assets/images/common/game_slot.png</path>
+            <pos>0.55 0.65</pos>
+            <origin>0.5 0.5</origin>
+            <maxSize>0.09 0.24</maxSize>
+            <zIndex>49</zIndex>            
+        </image>
+
+        <image name="game_slot1" extra="true">
+            <path>./assets/images/common/game_slot.png</path>
+            <pos>0.65 0.65</pos>
+            <origin>0.5 0.5</origin>
+            <maxSize>0.09 0.24</maxSize>
+            <zIndex>49</zIndex>            
+        </image>
+
+        <image name="game_slot2" extra="true">
+            <path>./assets/images/common/game_slot.png</path>
+            <pos>0.75 0.65</pos>
+            <origin>0.5 0.5</origin>
+            <maxSize>0.09 0.24</maxSize>
+            <zIndex>49</zIndex>            
+        </image>
+
+        <image name="game_slot3" extra="true">
+            <path>./assets/images/common/game_slot.png</path>
+            <pos>0.85 0.65</pos>
+            <origin>0.5 0.5</origin>
+            <maxSize>0.09 0.24</maxSize>
+            <zIndex>49</zIndex>            
+        </image>
+
+        <image name="game_slot4" extra="true">
+            <path>./assets/images/common/game_slot.png</path>
+            <pos>0.95 0.65</pos>
+            <origin>0.5 0.5</origin>
+            <maxSize>0.09 0.24</maxSize>
+            <zIndex>49</zIndex>            
+        </image>
 
         <text name="md_name">
             <pos>0.75 0.15</pos>
@@ -289,9 +329,8 @@
         </image>
 
         <text name="gamecarouselLogoText">
+            <fontSize>0.01</fontSize>
             <fontPath>./assets/fonts/dsi_font.otf</fontPath>
-            <forceUppercase>true</forceUppercase>
-            <fontSize>0.03</fontSize>
             <storyboard>
                 <animation event="scroll" property="scale"/>
             </storyboard>
