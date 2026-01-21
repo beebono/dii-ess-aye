@@ -77,6 +77,46 @@
             <zIndex>55</zIndex>
         </image>
 
+        <image name="menu_slot0" extra="true">
+            <path>./assets/images/common/menu_slot.png</path>
+            <pos>0.55 0.65</pos>
+            <origin>0.5 0.5</origin>
+            <maxSize>0.09 0.24</maxSize>
+            <zIndex>49</zIndex>            
+        </image>
+
+        <image name="menu_slot1" extra="true">
+            <path>./assets/images/common/menu_slot.png</path>
+            <pos>0.65 0.65</pos>
+            <origin>0.5 0.5</origin>
+            <maxSize>0.09 0.24</maxSize>
+            <zIndex>49</zIndex>            
+        </image>
+
+        <image name="menu_slot2" extra="true">
+            <path>./assets/images/common/menu_slot.png</path>
+            <pos>0.75 0.65</pos>
+            <origin>0.5 0.5</origin>
+            <maxSize>0.09 0.24</maxSize>
+            <zIndex>49</zIndex>            
+        </image>
+
+        <image name="menu_slot3" extra="true">
+            <path>./assets/images/common/menu_slot.png</path>
+            <pos>0.85 0.65</pos>
+            <origin>0.5 0.5</origin>
+            <maxSize>0.09 0.24</maxSize>
+            <zIndex>49</zIndex>            
+        </image>
+
+        <image name="menu_slot4" extra="true">
+            <path>./assets/images/common/menu_slot.png</path>
+            <pos>0.95 0.65</pos>
+            <origin>0.5 0.5</origin>
+            <maxSize>0.09 0.24</maxSize>
+            <zIndex>49</zIndex>            
+        </image>
+
         <image name="scroll_bar" extra="true">
             <path>./assets/images/common/scroll_bar.png</path>
             <pos>0.75 0.95</pos>
@@ -115,17 +155,36 @@
             <origin>0.5 0.5</origin>
             <size>0.5 0.25</size>
             <logoSize>0.04 0.12</logoSize>
-            <logoScale>2.3</logoScale>
+            <logoScale>1.0</logoScale>
             <color>00000000</color>
             <maxLogoCount>5</maxLogoCount>
             <zIndex>50</zIndex>
             <defaultTransition>instant</defaultTransition>
+            <transitionSpeed>0</transitionSpeed>
             <scrollSound>./assets/sounds/scroll.wav</scrollSound>
+            <minLogoOpacity>1</minLogoOpacity>
+            <systemInfoDelay>0</systemInfoDelay>
         </carousel>
 
         <text name="logoText">
             <fontPath>./assets/fonts/dsi_font.otf</fontPath>
             <forceUppercase>true</forceUppercase>
+            <fontSize>0.03</fontSize>
+            <storyboard>
+                <animation event="scroll" property="scale"/>
+            </storyboard>
+        </text>
+
+        <text name="systemName" extra="true">
+            <text>{system:fullName}</text>
+            <pos>0.75 0.15</pos>
+            <origin>0.5 0.5</origin>
+            <size>0.35 0.1</size>
+            <fontPath>./assets/fonts/dsi_font.otf</fontPath>
+            <fontSize>0.04</fontSize>
+            <color>333333FF</color>
+            <alignment>center</alignment>
+            <zIndex>57</zIndex>
         </text>
 
         <text name="systemInfo">
@@ -140,20 +199,10 @@
         </text>
 
         <image name="logo">
-            <path>./assets/images/common/menu_slot.png</path>
-            <!-- Ward off the default animations with this one weird trick! -->
+            <path>./assets/images/systems/{system:name}.png</path>
             <storyboard>
                 <animation event="scroll" property="scale"/>
-                <animation event="scroll" property="opacity"/>
             </storyboard>
-        </image>
-
-        <image name="scroll_window_sys" extra="true">
-            <path>./assets/images/common/scroll_window.png</path>
-            <pos>0.75 0.95</pos>
-            <origin>0.5 0.5</origin>
-            <size>0.05 0.1</size>
-            <zIndex>2</zIndex>
         </image>
     </view>
 
@@ -186,18 +235,28 @@
             <zIndex>2</zIndex>
         </video>
 
+        <text name="logoText">
+            <pos>0.25 0.9</pos>
+            <origin>0.5 0.5</origin>
+            <fontPath>./assets/fonts/dsi_font.otf</fontPath>
+        </text>
+
         <!-- Bottom screen (X 0.5-1.0) -->
         <gamecarousel name="gamecarousel">
             <type>horizontal</type>
-            <pos>0.75 0.75</pos>
+            <pos>0.75 0.64</pos>
             <origin>0.5 0.5</origin>
             <size>0.5 0.25</size>
-            <logoSize>0.09 0.24</logoSize>
-            <logoScale>1.0</logoScale>
+            <logoSize>0.3 0.85</logoSize>
+            <logoScale>0.75</logoScale>
             <color>00000000</color>
             <maxLogoCount>5</maxLogoCount>
             <zIndex>50</zIndex>
+            <defaultTransition>instant</defaultTransition>
+            <transitionSpeed>0</transitionSpeed>
             <scrollSound>./assets/sounds/scroll.wav</scrollSound>
+            <minLogoOpacity>1</minLogoOpacity>
+            <imageSource>image</imageSource>
         </gamecarousel>
 
         <text name="md_name">
@@ -222,27 +281,18 @@
             <zIndex>57</zIndex>
         </text>
 
-        <image name="md_thumbnail">
-            <pos>0.75 0.64</pos>
-            <origin>0.5 0.5</origin>
-            <maxSize>0.09 0.24</maxSize>
-            <zIndex>51</zIndex>
-        </image>
-
-        <image name="gamecarouselLogo"> <!-- Supposedly this should work for gamecarousel? -->
-            <path>./assets/images/common/menu_slot.png</path>
+        <image name="gamecarouselLogo">
             <storyboard>
                 <animation event="scroll" property="scale"/>
-                <animation event="scroll" property="opacity"/>
             </storyboard>
         </image>
 
-        <image name="scroll_window_game" extra="true">
-            <path>./assets/images/common/scroll_window.png</path>
-            <pos>0.75 0.95</pos>
-            <origin>0.5 0.5</origin>
-            <size>0.05 0.1</size>
-            <zIndex>2</zIndex>
-        </image>
+        <text name="gamecarouselLogoText">
+            <fontPath>./assets/fonts/dsi_font.otf</fontPath>
+            <forceUppercase>true</forceUppercase>
+            <storyboard>
+                <animation event="scroll" property="scale"/>
+            </storyboard>
+        </text>
     </view>
 </theme>
