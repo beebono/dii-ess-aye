@@ -2,7 +2,6 @@
 A janky emulationstation theme for ROCKNIX meant to make the Anbernic RG DS or AYN Thor feel a bit more like a chunky DSi.
 
 # Known Issues (that probably won't be fixed)
-
 1. Keyboard and horizontally longer popups are incorrectly sized.
 2. Advanced Game Options is hidden.
   - Workaround by pressing your Advanced Game Options button twice.
@@ -29,9 +28,9 @@ I recommend using Skraper and setting it to:
 
 
 # Special Thanks!
-Ant (https://github.com/anthonycaccese) for the status icons and their implementation.
-Jeod (https://github.com/JeodC) for help testing the Thor variant.
-RetroPie (https://github.com/RetroPie/es-theme-pixel) for most of the system icons.
+- Ant (https://github.com/anthonycaccese) for the status icons and their implementation.
+- Jeod (https://github.com/JeodC) for help testing the Thor variant.
+- RetroPie (https://github.com/RetroPie/es-theme-pixel) for most of the system icons.
 
 # Previews
 <img src="main_preview.jpeg" width="49%" /> <img src="game_preview.jpeg" width="49%" />
