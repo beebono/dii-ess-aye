@@ -1,6 +1,11 @@
 # DII-ESS-AYE
 A janky emulationstation theme for ROCKNIx meant to make the Anbernic RG DS or AYN Thor feel a bit more like a chunky DSi.
 
+# Known Issues (that probably won't be fixed)
+1. Keyboard popups are incorrectly sized.
+2. Advanced Game Options is hidden.
+  - Workaround by pressing your Advanced Game Options button twice.
+
 # Install
 1. Download or clone this repository
 2. Copy the contents of this repository into your themes folder under a folder named `dii-ess-aye`
