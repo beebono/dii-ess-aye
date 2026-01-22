@@ -20,7 +20,18 @@ A janky emulationstation theme for ROCKNIX meant to make the Anbernic RG DS or A
     - Optionally, set the script's metadata Hidden option if you don't want it to clutter the ports
 5. Enjoy?
 
+# Scraping Recommendations
+I recommend using Skraper and setting it to:
+- Generate a gamelist.xml
+- Scrape a miximage, linked to <image> node
+- Scrape a support texture, linked to <thumbnail> node
+- (Optional) Scrape a video, linked to <video> node
+
+
 # Special Thanks!
 Ant (https://github.com/anthonycaccese) for the status icons and their implementation.
 Jeod (https://github.com/JeodC) for help testing the Thor variant.
 RetroPie (https://github.com/RetroPie/es-theme-pixel) for most of the system icons.
+
+# Previews
+<img src="main_preview.jpeg" width="49%" /> <img src="game_preview.jpeg" width="49%" />
