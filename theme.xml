@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<theme defaultTransition="instant">
+<theme defaultTransition="instant" defaultView="gamecarousel">
     <formatVersion>7</formatVersion>
 
     <!--
@@ -8,11 +8,23 @@
         Bottom screen (right): X 0.5-1.0, center X=0.75
     -->
 
+    <!-- This section generously provided by Ant (https://github.com/anthonycaccese)
+    ///
+    View: Screen
+    ///
+    -->
     <view name="screen">
-        <!-- Visibility override -->
+        <!-- Start: Resets -->
         <controllerActivity name="controllerActivity">
             <visible>false</visible>
         </controllerActivity>
+        <batteryIndicator name="batteryIndicator">
+            <visible>false</visible>
+        </batteryIndicator>
+        <text name="clock">
+            <pos>1 1</pos>
+        </text>
+        <!-- End: Resets -->
     </view>
 
     <!-- Global elements -->
@@ -26,6 +38,52 @@
         </image>
 
         <!-- Top screen (X 0-0.5) -->
+        
+        <!-- This section (and its graphics) generously provided by Ant (https://github.com/anthonycaccese) -->
+        <!-- Start: System Indicators -->
+        <stackpanel name="system-indicators-left,system-indicators-right" extra="true">
+            <w>0.484375</w><!-- 620 -->
+            <h>0.05625</h><!-- 27 -->
+            <separator>5</separator>
+            <pos>0.0078125 0.0166667</pos><!-- 10 8 -->
+        </stackpanel>
+        <stackpanel name="system-indicators-left" extra="true">
+            <orientation>horizontal</orientation>
+            <reverse>false</reverse>
+            <clock name="system-clock">
+                <color>333333FF</color>
+                <fontPath>./assets/fonts/dsi_font.otf</fontPath>
+                <fontSize>0.0291667</fontSize><!-- 14 -->
+                <lineSpacing>1</lineSpacing>
+            </clock>
+        </stackpanel>
+        <stackpanel name="system-indicators-right" extra="true">
+            <orientation>horizontal</orientation>
+            <reverse>true</reverse>
+            <batteryText name="system-battery-text">
+                <color>333333FF</color>
+                <fontPath>./assets/fonts/dsi_font.otf</fontPath>
+                <fontSize>0.0291667</fontSize><!-- 14 -->
+                <lineSpacing>1</lineSpacing>
+            </batteryText>
+            <batteryIcon name="system-battery-icon">
+                <maxSize>1 1</maxSize>
+                <full>./assets/images/common/battery_icon_100.svg</full>
+                <at75>./assets/images/common/battery_icon_75.svg</at75>
+                <at50>./assets/images/common/battery_icon_50.svg</at50>
+                <at25>./assets/images/common/battery_icon_25.svg</at25>
+                <empty>./assets/images/common/battery_icon_0.svg</empty>
+                <incharge>./assets/images/common/battery-icon-charging.svg</incharge>
+            </batteryIcon>
+            <networkIcon name="system-network-icon">
+                <maxSize>1 1</maxSize>
+                <color>333333FF</color>
+                <networkIcon>./assets/images/common/network_icon_on.svg</networkIcon>
+                <planemodeIcon>./assets/images/common/network_icon_off.svg</planemodeIcon>
+            </networkIcon>
+        </stackpanel>
+        <!-- End: System Indicators -->
+
         <image name="left_tab_image" extra="true">
             <path>./assets/images/common/left_tab.png</path>
             <pos>0 0.85</pos>
@@ -94,11 +152,6 @@
 
     <!-- Main system selection menu -->
     <view name="system">
-        <!-- Both screens -->
-        <sound name="launch">
-            <path>./assets/sounds/select.wav</path>
-        </sound>
-
         <!-- Top screen (X 0-0.5) -->
         <image name="distro_logo" extra="true">
             <path>./assets/images/common/distro_logo.png</path>
@@ -211,9 +264,6 @@
         <!-- Both screens -->
         <sound name="launch">
             <path>./assets/sounds/launch.wav</path>
-        </sound>
-        <sound name="back">
-            <path>./assets/sounds/back.wav</path>
         </sound>
 
         <!-- Top screen (X 0-0.5) -->
@@ -335,5 +385,17 @@
                 <animation event="scroll" property="scale"/>
             </storyboard>
         </text>
+    </view>
+
+    <view name="menu">
+        <menuText name="menutext, menutitle, menufooter">
+            <fontSize>0.03</fontSize>
+            <fontPath>./assets/fonts/dsi_font.otf</fontPath>
+        </menuText>
+
+        <menuTextSmall name="menutextsmall">
+            <fontSize>0.03</fontSize>
+            <fontPath>./assets/fonts/dsi_font.otf</fontPath>
+        </menuTextSmall>
     </view>
 </theme>
