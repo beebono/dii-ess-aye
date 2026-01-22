@@ -19,6 +19,12 @@ EOF
 swaymsg reload
 
 ES_SETTINGS="/storage/.config/emulationstation/es_settings.cfg"
+if grep -q '<string name="FullScreenMenu"' "$ES_SETTINGS" 2>/dev/null; then
+    sed -i 's|<string name="FullScreenMenu" value="[^"]*" />|<string name="FullScreenMenu" value="false" />|' "$ES_SETTINGS"
+else
+    sed -i 's|</config>|\t<string name="FullScreenMenu" value="false" />\n</config>|' "$ES_SETTINGS"
+fi
+
 if grep -q '<string name="ThemeSet"' "$ES_SETTINGS" 2>/dev/null; then
     sed -i 's|<string name="ThemeSet" value="[^"]*" />|<string name="ThemeSet" value="dii-ess-aye" />|' "$ES_SETTINGS"
 else
