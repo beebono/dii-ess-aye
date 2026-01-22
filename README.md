@@ -1,8 +1,9 @@
 # DII-ESS-AYE
-A janky emulationstation theme for ROCKNIx meant to make the Anbernic RG DS or AYN Thor feel a bit more like a chunky DSi.
+A janky emulationstation theme for ROCKNIX meant to make the Anbernic RG DS or AYN Thor feel a bit more like a chunky DSi.
 
 # Known Issues (that probably won't be fixed)
-1. Keyboard popups are incorrectly sized.
+
+1. Keyboard and horizontally longer popups are incorrectly sized.
 2. Advanced Game Options is hidden.
   - Workaround by pressing your Advanced Game Options button twice.
 
