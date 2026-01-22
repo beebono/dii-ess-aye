@@ -23,9 +23,9 @@ A janky emulationstation theme for ROCKNIX meant to make the Anbernic RG DS or A
 # Scraping Recommendations
 I recommend using Skraper and setting it to:
 - Generate a gamelist.xml
-- Scrape a miximage, linked to <image> node
-- Scrape a support texture, linked to <thumbnail> node
-- (Optional) Scrape a video, linked to <video> node
+- Scrape a miximage, linked to `<image>` node
+- Scrape a support texture, linked to `<thumbnail>` node
+- (Optional) Scrape a video, linked to `<video>` node
 
 
 # Special Thanks!
