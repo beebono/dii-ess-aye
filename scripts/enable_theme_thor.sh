@@ -14,6 +14,7 @@ else
     exit 1
 fi
 
+chmod +x "${THEME_PATH}/scripts/start_es_thor.sh"
 mount --bind "${THEME_PATH}/scripts/start_es_thor.sh" "/usr/bin/start_es.sh"
 
 cat <<EOF >/storage/.config/sway/config
