@@ -5,18 +5,19 @@ A janky emulationstation theme for ROCKNIX meant to make the Anbernic RG DS or A
 1. Keyboard and horizontally longer popups are incorrectly sized.
 2. Advanced Game Options is hidden.
   - Workaround by pressing your Advanced Game Options button twice.
+3. Slider setting bars are way too long.
 
 # Install
 1. Download or clone this repository
 2. Copy the contents of this repository into your themes folder under a folder named `dii-ess-aye`
   - Either connect to your network share and put it in the `themes` folder
   - Or copy it to `/STORAGE/.config/emulationstation/themes/` directly
-3. Copy the script for your device from the repository's `scripts` folder into your `roms/ports` folder
+3. Copy only the enable script for your device from the repository's `scripts` folder into your `roms/ports` folder
 4. After updating your gamelists, open your ports section on your device and
-  - Either run the script every time you want to enable the theme
+  - Either run the enable script every time you want to enable the theme
     - (You will have to manually change the theme setting when you want to switch back)
-  - Or set the script to run at launch by opening the Advanced Game Options and enabling that option
-    - Optionally, set the script's metadata Hidden option if you don't want it to clutter the ports
+  - Or set the enable script to run at launch by opening the Advanced Game Options and turning on that option
+    - Optionally, set the enable script's metadata Hidden option if you don't want it to clutter the ports
 5. Enjoy?
 
 # Scraping Recommendations
@@ -25,7 +26,6 @@ I recommend using Skraper and setting it to:
 - Scrape a miximage, linked to `<image>` node
 - Scrape a support texture, linked to `<thumbnail>` node
 - (Optional) Scrape a video, linked to `<video>` node
-
 
 # Special Thanks!
 - Ant (https://github.com/anthonycaccese) for the status icons and their implementation.
