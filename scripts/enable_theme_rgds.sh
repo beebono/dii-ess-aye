@@ -1,6 +1,20 @@
 #!/bin/bash
 
-mount --bind "/storage/.config/emulationstation/themes/dii-ess-aye/scripts/start_es_rgds.sh" "/usr/bin/start_es.sh"
+THEME_PATH=""
+if [ -f "/roms/themes/dii-ess-aye" ]; then
+    THEME_PATH="/roms/themes/dii-ess-aye"
+else if [ -f "/roms/themes/dii-ess-aye-main" ]; then
+    THEME_PATH="/roms/themes/dii-ess-aye-main"
+else if [ -f "/storage/.config/emulationstation/themes/dii-ess-aye" ]; then
+    THEME_PATH="/storage/.config/emulationstation/themes/dii-ess-aye"
+else if [ -f "/storage/.config/emulationstation/themes/dii-ess-aye-main" ]; then
+    THEME_PATH="/storage/.config/emulationstation/themes/dii-ess-aye-main"
+else
+    echo "ERROR! Couldn't find a dii-ess-aye theme folder on your device!"
+    exit 0
+fi
+
+mount --bind "${THEME_PATH}/scripts/start_es_rgds.sh" "/usr/bin/start_es.sh"
 
 cat <<EOF >/storage/.config/sway/config
 seat * hide_cursor 1000
