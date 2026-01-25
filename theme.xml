@@ -3,5 +3,5 @@
     <formatVersion>7</formatVersion>
 
     <include if="${screen.width} == 1920">./theme-rgds.xml</include>
-    <include if="${screen.width} == 4400">./theme-thor.xml</include>
+    <include if="${screen.width} != 1920">./theme-thor.xml</include>
 </theme>
