@@ -169,7 +169,7 @@
             <pos>0.859 0.64</pos>
             <origin>0.5 0.5</origin>
             <size>0.282 0.25</size>
-            <logoSize>0.18 0.21</logoSize>
+            <logoSize>0.1 0.17</logoSize>
             <logoScale>1</logoScale>
             <color>00000000</color>
             <maxLogoCount>5</maxLogoCount>
@@ -190,7 +190,7 @@
         </text>
 
         <text name="systemName" extra="true">
-            <text>{system:fullName}</text>
+            <text>{system:collection} ? proper({system:fullName}) : {system:fullName}</text>
             <pos>0.859 0.15</pos>
             <origin>0.5 0.5</origin>
             <size>0.197 0.1</size>
@@ -217,8 +217,8 @@
             <path>./assets/images/systems/${system.theme}.png</path>
             <image name="menu_slot" extra="true">
                 <path>./assets/images/common/menu_slot.png</path>
-                <scale>1.2</scale>
-                <scaleOrigin>0.5 0.4</scaleOrigin>
+                <scale>1.45</scale>
+                <scaleOrigin>0.5 0.35</scaleOrigin>
             </image>
             <storyboard>
                 <animation event="scroll" property="scale"/>
@@ -254,9 +254,17 @@
         </video>
 
         <text name="logoText">
-            <pos>0.5 0.9</pos>
+            <visible>false</visible>
+        </text>
+
+        <text name="systemNameFromGame" extra="true">
+            <pos>0.1667 0.9</pos>
+            <size>0.15 0.11</size>
             <origin>0.5 0.5</origin>
+            <text>{game:system:collection} ? proper({game:system:fullName}) : {game:system:fullName}</text>
+            <alignment>center</alignment>
             <fontPath>./assets/fonts/dsi_font.otf</fontPath>
+            <fontSize>0.05</fontSize>
         </text>
 
         <!-- Bottom screen (X 0.7182-1.0) -->
@@ -265,7 +273,6 @@
             <pos>0.859 0.64</pos>
             <origin>0.5 0.5</origin>
             <size>0.282 0.25</size>
-            <logoSize>0.32 0.55</logoSize>
             <logoScale>1</logoScale>
             <color>00000000</color>
             <maxLogoCount>5</maxLogoCount>
@@ -279,6 +286,10 @@
             <origin>0.5 0.5</origin>
             <image name="game_slot" extra="true">
                 <path>./assets/images/common/game_slot.png</path>
+                <pos>0.05 0</pos>
+                <pos if="${system.fullName} == 'Tools'">0.1175 0</pos>
+                <size>0.9 1</size>
+                <size if="${system.fullName} == 'Tools'">0.775 1</size>
                 <scale>1.5</scale>
                 <scaleOrigin>0.5 0.4</scaleOrigin>
             </image>
