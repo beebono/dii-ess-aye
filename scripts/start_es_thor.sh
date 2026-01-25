@@ -5,4 +5,4 @@
 ### setup is the same
 . $(dirname $0)/es_settings
 
-emulationstation --log-path /var/log --no-splash --windowed --resolution 3160 1080
+emulationstation --log-path /var/log --no-splash --resolution 4400 1080

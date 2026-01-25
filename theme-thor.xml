@@ -95,9 +95,9 @@
 
         <text name="left_tab_text" extra="true">
             <text>Prev</text>
-            <pos>0.3254 0.875</pos>
+            <pos>0.3254 0.8825</pos>
             <fontPath>${themePath}/assets/fonts/dsi_font.otf</fontPath>
-            <fontSize>0.05</fontSize>
+            <fontSize>0.06</fontSize>
             <color>333333FF</color>
             <alignment>left</alignment>
             <zIndex>2</zIndex>
@@ -112,9 +112,9 @@
 
         <text name="right_tab_text" extra="true">
             <text>Next</text>
-            <pos>0.631 0.875</pos>
+            <pos>0.635 0.8825</pos>
             <fontPath>${themePath}/assets/fonts/dsi_font.otf</fontPath>
-            <fontSize>0.05</fontSize>
+            <fontSize>0.06</fontSize>
             <color>333333FF</color>
             <alignment>right</alignment>
             <zIndex>2</zIndex>

@@ -29,6 +29,12 @@ I recommend using Skraper and setting it to:
 - Scrape a support texture, resized to a square resolution, linked to `<thumbnail>` node
 - (Optional) Scrape a video, linked to `<video>` node
 
+If you already have a scraped collection, and just want to make it look okay enough with this theme
+there are additional thumbnail scripts provided in the `scripts/thumbnails` directory of this repository
+that can automatically crop (hard cut to 256x256), squish (preserves image, compresses to fit 256x256),
+or resize (preserves image and aspect ratio, shrinks to 256x256) your existing boxart or support textures.
+These can be run on your device after all gamelists, games, and images are in place.
+
 # Special Thanks!
 - Ant (https://github.com/anthonycaccese) for the status and slot icons and their implementation.
 - Jeod (https://github.com/JeodC) for help testing the Thor variant.
