@@ -44,10 +44,10 @@
         <!-- This section (and its graphics) generously provided by Ant (https://github.com/anthonycaccese) -->
         <!-- Start: System Indicators -->
         <stackpanel name="system-indicators-left,system-indicators-right" extra="true">
-            <w>0.529</w><!-- 620 -->
+            <w>0.423</w><!-- 620 -->
             <h>0.025</h><!-- 27 -->
             <separator>5</separator>
-            <pos>0.216 0.0074</pos><!-- 10 8 -->
+            <pos>0.2886 0.0074</pos><!-- 10 8 -->
         </stackpanel>
         <stackpanel name="system-indicators-left" extra="true">
             <orientation>horizontal</orientation>
@@ -88,14 +88,14 @@
 
         <image name="left_tab_image" extra="true">
             <path>${themePath}/assets/images/common/left_tab.png</path>
-            <pos>0.211 0.85</pos>
-            <size>0.136 0.15</size>
+            <pos>0.2818 0.85</pos>
+            <size>0.109 0.15</size>
             <zIndex>1</zIndex>
         </image>
 
         <text name="left_tab_text" extra="true">
             <text>Prev</text>
-            <pos>0.244 0.875</pos>
+            <pos>0.3254 0.875</pos>
             <fontPath>${themePath}/assets/fonts/dsi_font.otf</fontPath>
             <fontSize>0.05</fontSize>
             <color>333333FF</color>
@@ -105,14 +105,14 @@
 
         <image name="right_tab_image" extra="true">
             <path>${themePath}/assets/images/common/right_tab.png</path>
-            <pos>0.457 0.85</pos>
-            <size>0.136 0.15</size>
+            <pos>0.609 0.85</pos>
+            <size>0.109 0.15</size>
             <zIndex>1</zIndex>
         </image>
 
         <text name="right_tab_text" extra="true">
             <text>Next</text>
-            <pos>0.473 0.875</pos>
+            <pos>0.631 0.875</pos>
             <fontPath>${themePath}/assets/fonts/dsi_font.otf</fontPath>
             <fontSize>0.05</fontSize>
             <color>333333FF</color>
@@ -123,15 +123,15 @@
         <!-- Bottom screen (X 0.7182-1.0) -->
         <image name="text_bubble" extra="true">
             <path>${themePath}/assets/images/common/text_bubble.png</path>
-            <pos>0.644 0.3</pos>
+            <pos>0.859 0.3</pos>
             <origin>0.5 0.5</origin>
-            <size>0.283 0.45</size>
+            <size>0.226 0.45</size>
             <zIndex>56</zIndex>
         </image>
 
         <image name="start_window" extra="true">
             <path>${themePath}/assets/images/common/start_window.png</path>
-            <pos>0.644 0.67</pos>
+            <pos>0.859 0.67</pos>
             <origin>0.5 0.5</origin>
             <maxSize>0.12 0.32</maxSize>
             <zIndex>55</zIndex>
@@ -139,9 +139,9 @@
 
         <image name="scroll_bar" extra="true">
             <path>${themePath}/assets/images/common/scroll_bar.png</path>
-            <pos>0.644 0.95</pos>
+            <pos>0.859 0.95</pos>
             <origin>0.5 0.5</origin>
-            <size>0.353 0.1</size>
+            <size>0.282 0.1</size>
             <zIndex>1</zIndex>
         </image>
 
@@ -157,7 +157,7 @@
         <!-- Top screen (X 0.2818-0.7182) -->
         <image name="distro_logo" extra="true">
             <path>${themePath}/assets/images/common/distro_logo.png</path>
-            <pos>0.375 0.5</pos>
+            <pos>0.5 0.5</pos>
             <origin>0.5 0.5</origin>
             <maxSize>0.3 0.6</maxSize>
             <zIndex>1</zIndex>
@@ -166,9 +166,9 @@
         <!-- Bottom screen (X 0.7182-1.0) -->
         <carousel name="systemcarousel">
             <type>horizontal</type>
-            <pos>0.644 0.64</pos>
+            <pos>0.859 0.64</pos>
             <origin>0.5 0.5</origin>
-            <size>0.353 0.25</size>
+            <size>0.282 0.25</size>
             <logoSize>0.1 0.17</logoSize>
             <logoScale>1</logoScale>
             <color>00000000</color>
@@ -191,9 +191,9 @@
 
         <text name="systemName" extra="true">
             <text>{system:collection} ? proper({system:fullName}) : {system:fullName}</text>
-            <pos>0.644 0.15</pos>
+            <pos>0.859 0.15</pos>
             <origin>0.5 0.5</origin>
-            <size>0.246 0.1</size>
+            <size>0.197 0.1</size>
             <fontPath>${themePath}/assets/fonts/dsi_font.otf</fontPath>
             <fontSize>0.04</fontSize>
             <color>333333FF</color>
@@ -202,9 +202,9 @@
         </text>
 
         <text name="systemInfo">
-            <pos>0.644 0.35</pos>
+            <pos>0.859 0.35</pos>
             <origin>0.5 0.5</origin>
-            <size>0.246 0.3</size>
+            <size>0.197 0.3</size>
             <fontPath>${themePath}/assets/fonts/dsi_font.otf</fontPath>
             <fontSize>0.025</fontSize>
             <color>333333FF</color>
@@ -235,14 +235,14 @@
         <!-- Top screen (X 0.2818-0.7182) -->
         <image name="preview_panel" extra="true">
             <path>${themePath}/assets/images/common/preview_panel.png</path>
-            <pos>0.375 0.45</pos>
+            <pos>0.5 0.45</pos>
             <origin>0.5 0.5</origin>
-            <size>0.436 0.65</size>
+            <size>0.349 0.65</size>
             <zIndex>1</zIndex>
         </image>
 
         <video name="md_video">
-            <pos>0.375 0.45</pos>
+            <pos>0.5 0.45</pos>
             <origin>0.5 0.5</origin>
             <maxSize>0.35 0.6</maxSize>
             <effect>none</effect>
@@ -258,8 +258,8 @@
         </text>
 
         <text name="systemNameFromGame" extra="true">
-            <pos>0.125 0.9</pos>
-            <size>0.188 0.11</size>
+            <pos>0.1667 0.9</pos>
+            <size>0.15 0.11</size>
             <origin>0.5 0.5</origin>
             <text>{game:system:collection} ? proper({game:system:fullName}) : {game:system:fullName}</text>
             <alignment>center</alignment>
@@ -270,9 +270,9 @@
         <!-- Bottom screen (X 0.7182-1.0) -->
         <gamecarousel name="gamecarousel">
             <type>horizontal</type>
-            <pos>0.644 0.64</pos>
+            <pos>0.859 0.64</pos>
             <origin>0.5 0.5</origin>
-            <size>0.353 0.25</size>
+            <size>0.282 0.25</size>
             <logoScale>1</logoScale>
             <color>00000000</color>
             <maxLogoCount>5</maxLogoCount>
@@ -299,9 +299,9 @@
         </image>
 
         <text name="md_name">
-            <pos>0.644 0.15</pos>
+            <pos>0.859 0.15</pos>
             <origin>0.5 0.5</origin>
-            <size>0.246 0.1</size>
+            <size>0.197 0.1</size>
             <fontPath>${themePath}/assets/fonts/dsi_font.otf</fontPath>
             <fontSize>0.04</fontSize>
             <color>333333FF</color>
@@ -310,9 +310,9 @@
         </text>
 
         <text name="md_description">
-            <pos>0.644 0.31</pos>
+            <pos>0.859 0.31</pos>
             <origin>0.5 0.5</origin>
-            <size>0.246 0.22</size>
+            <size>0.197 0.22</size>
             <fontPath>${themePath}/assets/fonts/dsi_font.otf</fontPath>
             <fontSize>0.03</fontSize>
             <color>555555FF</color>
