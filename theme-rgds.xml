@@ -35,7 +35,7 @@
         <image name="background" extra="true">
             <pos>0 0</pos>
             <size>1 1</size>
-            <path>./assets/images/common/background.png</path>
+            <path>${themePath}/assets/images/common/background.png</path>
             <zIndex>0</zIndex>
         </image>
 
@@ -54,7 +54,7 @@
             <reverse>false</reverse>
             <clock name="system-clock">
                 <color>333333FF</color>
-                <fontPath>./assets/fonts/dsi_font.otf</fontPath>
+                <fontPath>${themePath}/assets/fonts/dsi_font.otf</fontPath>
                 <fontSize>0.0291667</fontSize><!-- 14 -->
                 <lineSpacing>1</lineSpacing>
             </clock>
@@ -64,30 +64,30 @@
             <reverse>true</reverse>
             <batteryText name="system-battery-text">
                 <color>333333FF</color>
-                <fontPath>./assets/fonts/dsi_font.otf</fontPath>
+                <fontPath>${themePath}/assets/fonts/dsi_font.otf</fontPath>
                 <fontSize>0.0291667</fontSize><!-- 14 -->
                 <lineSpacing>1</lineSpacing>
             </batteryText>
             <batteryIcon name="system-battery-icon">
                 <maxSize>1 1</maxSize>
-                <full>./assets/images/common/battery_icon_100.svg</full>
-                <at75>./assets/images/common/battery_icon_75.svg</at75>
-                <at50>./assets/images/common/battery_icon_50.svg</at50>
-                <at25>./assets/images/common/battery_icon_25.svg</at25>
-                <empty>./assets/images/common/battery_icon_0.svg</empty>
-                <incharge>./assets/images/common/battery_icon_charging.svg</incharge>
+                <full>${themePath}/assets/images/common/battery_icon_100.svg</full>
+                <at75>${themePath}/assets/images/common/battery_icon_75.svg</at75>
+                <at50>${themePath}/assets/images/common/battery_icon_50.svg</at50>
+                <at25>${themePath}/assets/images/common/battery_icon_25.svg</at25>
+                <empty>${themePath}/assets/images/common/battery_icon_0.svg</empty>
+                <incharge>${themePath}/assets/images/common/battery_icon_charging.svg</incharge>
             </batteryIcon>
             <networkIcon name="system-network-icon">
                 <maxSize>1 1</maxSize>
                 <color>333333FF</color>
-                <networkIcon>./assets/images/common/network_icon_on.svg</networkIcon>
-                <planemodeIcon>./assets/images/common/network_icon_off.svg</planemodeIcon>
+                <networkIcon>${themePath}/assets/images/common/network_icon_on.svg</networkIcon>
+                <planemodeIcon>${themePath}/assets/images/common/network_icon_off.svg</planemodeIcon>
             </networkIcon>
         </stackpanel>
         <!-- End: System Indicators -->
 
         <image name="left_tab_image" extra="true">
-            <path>./assets/images/common/left_tab.png</path>
+            <path>${themePath}/assets/images/common/left_tab.png</path>
             <pos>0 0.85</pos>
             <size>0.0833 0.15</size>
             <zIndex>1</zIndex>
@@ -96,7 +96,7 @@
         <text name="left_tab_text" extra="true">
             <text>Prev</text>
             <pos>0.03 0.885</pos>
-            <fontPath>./assets/fonts/dsi_font.otf</fontPath>
+            <fontPath>${themePath}/assets/fonts/dsi_font.otf</fontPath>
             <fontSize>0.05</fontSize>
             <color>333333FF</color>
             <alignment>left</alignment>
@@ -104,7 +104,7 @@
         </text>
 
         <image name="right_tab_image" extra="true">
-            <path>./assets/images/common/right_tab.png</path>
+            <path>${themePath}/assets/images/common/right_tab.png</path>
             <pos>0.25 0.85</pos>
             <size>0.0833 0.15</size>
             <zIndex>1</zIndex>
@@ -113,7 +113,7 @@
         <text name="right_tab_text" extra="true">
             <text>Next</text>
             <pos>0.266 0.885</pos>
-            <fontPath>./assets/fonts/dsi_font.otf</fontPath>
+            <fontPath>${themePath}/assets/fonts/dsi_font.otf</fontPath>
             <fontSize>0.05</fontSize>
             <color>333333FF</color>
             <alignment>right</alignment>
@@ -122,7 +122,7 @@
 
         <!-- Bottom screen (X 0.333-0.666) -->
         <image name="text_bubble" extra="true">
-            <path>./assets/images/common/text_bubble.png</path>
+            <path>${themePath}/assets/images/common/text_bubble.png</path>
             <pos>0.5 0.3</pos>
             <origin>0.5 0.5</origin>
             <size>0.2667 0.45</size>
@@ -130,7 +130,7 @@
         </image>
 
         <image name="start_window" extra="true">
-            <path>./assets/images/common/start_window.png</path>
+            <path>${themePath}/assets/images/common/start_window.png</path>
             <pos>0.5 0.67</pos>
             <origin>0.5 0.5</origin>
             <maxSize>0.12 0.32</maxSize>
@@ -138,7 +138,7 @@
         </image>
 
         <image name="scroll_bar" extra="true">
-            <path>./assets/images/common/scroll_bar.png</path>
+            <path>${themePath}/assets/images/common/scroll_bar.png</path>
             <pos>0.5 0.95</pos>
             <origin>0.5 0.5</origin>
             <size>0.3333 0.1</size>
@@ -156,7 +156,7 @@
     <view name="system">
         <!-- Top screen (X 0-0.333) -->
         <image name="distro_logo" extra="true">
-            <path>./assets/images/common/distro_logo.png</path>
+            <path>${themePath}/assets/images/common/distro_logo.png</path>
             <pos>0.167 0.5</pos>
             <origin>0.5 0.5</origin>
             <maxSize>0.3 0.6</maxSize>
@@ -175,13 +175,13 @@
             <maxLogoCount>5</maxLogoCount>
             <zIndex>50</zIndex>
             <defaultTransition>instant</defaultTransition>
-            <scrollSound>./assets/sounds/scroll.wav</scrollSound>
+            <scrollSound>${themePath}/assets/sounds/scroll.wav</scrollSound>
             <minLogoOpacity>1</minLogoOpacity>
             <systemInfoDelay>0</systemInfoDelay>
         </carousel>
 
         <text name="logoText">
-            <fontPath>./assets/fonts/dsi_font.otf</fontPath>
+            <fontPath>${themePath}/assets/fonts/dsi_font.otf</fontPath>
             <forceUppercase>true</forceUppercase>
             <fontSize>0.03</fontSize>
             <storyboard>
@@ -194,7 +194,7 @@
             <pos>0.5 0.15</pos>
             <origin>0.5 0.5</origin>
             <size>0.2333 0.1</size>
-            <fontPath>./assets/fonts/dsi_font.otf</fontPath>
+            <fontPath>${themePath}/assets/fonts/dsi_font.otf</fontPath>
             <fontSize>0.04</fontSize>
             <color>333333FF</color>
             <alignment>center</alignment>
@@ -205,7 +205,7 @@
             <pos>0.5 0.35</pos>
             <origin>0.5 0.5</origin>
             <size>0.2333 0.3</size>
-            <fontPath>./assets/fonts/dsi_font.otf</fontPath>
+            <fontPath>${themePath}/assets/fonts/dsi_font.otf</fontPath>
             <fontSize>0.025</fontSize>
             <color>333333FF</color>
             <alignment>center</alignment>
@@ -213,10 +213,10 @@
         </text>
 
         <image name="logo">
-            <path>./assets/images/systems/default.png</path>
-            <path>./assets/images/systems/${system.theme}.png</path>
+            <path>${themePath}/assets/images/systems/default.png</path>
+            <path>${themePath}/assets/images/systems/${system.theme}.png</path>
             <image name="menu_slot" extra="true">
-                <path>./assets/images/common/menu_slot.png</path>
+                <path>${themePath}/assets/images/common/menu_slot.png</path>
                 <scale>1.45</scale>
                 <scaleOrigin>0.5 0.35</scaleOrigin>
             </image>
@@ -229,12 +229,12 @@
     <view name="gamecarousel">
         <!-- Both screens -->
         <sound name="launch">
-            <path>./assets/sounds/launch.wav</path>
+            <path>${themePath}/assets/sounds/launch.wav</path>
         </sound>
 
         <!-- Top screen (X 0-0.333) -->
         <image name="preview_panel" extra="true">
-            <path>./assets/images/common/preview_panel.png</path>
+            <path>${themePath}/assets/images/common/preview_panel.png</path>
             <pos>0.167 0.45</pos>
             <origin>0.5 0.5</origin>
             <size>0.2667 0.65</size>
@@ -263,7 +263,7 @@
             <origin>0.5 0.5</origin>
             <text>{game:system:collection} ? proper({game:system:fullName}) : {game:system:fullName}</text>
             <alignment>center</alignment>
-            <fontPath>./assets/fonts/dsi_font.otf</fontPath>
+            <fontPath>${themePath}/assets/fonts/dsi_font.otf</fontPath>
             <fontSize>0.05</fontSize>
         </text>
 
@@ -277,7 +277,7 @@
             <color>00000000</color>
             <maxLogoCount>5</maxLogoCount>
             <zIndex>50</zIndex>
-            <scrollSound>./assets/sounds/scroll.wav</scrollSound>
+            <scrollSound>${themePath}/assets/sounds/scroll.wav</scrollSound>
             <minLogoOpacity>1</minLogoOpacity>
             <imageSource if="${system.hardwareType} == 'System'">image</imageSource>
         </gamecarousel>
@@ -285,7 +285,7 @@
         <image name="gamecarouselLogo">
             <origin>0.5 0.5</origin>
             <image name="game_slot" extra="true">
-                <path>./assets/images/common/game_slot.png</path>
+                <path>${themePath}/assets/images/common/game_slot.png</path>
                 <pos>0.05 0</pos>
                 <pos if="${system.fullName} == 'Tools'">0.1175 0</pos>
                 <size>0.9 1</size>
@@ -302,7 +302,7 @@
             <pos>0.5 0.15</pos>
             <origin>0.5 0.5</origin>
             <size>0.2333 0.1</size>
-            <fontPath>./assets/fonts/dsi_font.otf</fontPath>
+            <fontPath>${themePath}/assets/fonts/dsi_font.otf</fontPath>
             <fontSize>0.04</fontSize>
             <color>333333FF</color>
             <alignment>center</alignment>
@@ -313,7 +313,7 @@
             <pos>0.5 0.31</pos>
             <origin>0.5 0.5</origin>
             <size>0.2333 0.22</size>
-            <fontPath>./assets/fonts/dsi_font.otf</fontPath>
+            <fontPath>${themePath}/assets/fonts/dsi_font.otf</fontPath>
             <fontSize>0.03</fontSize>
             <color>555555FF</color>
             <alignment>center</alignment>
@@ -322,7 +322,7 @@
 
         <text name="gamecarouselLogoText">
             <fontSize>0.01</fontSize>
-            <fontPath>./assets/fonts/dsi_font.otf</fontPath>
+            <fontPath>${themePath}/assets/fonts/dsi_font.otf</fontPath>
             <storyboard>
                 <animation event="scroll" property="scale"/>
             </storyboard>
@@ -336,17 +336,17 @@
 
         <menuText name="menutext, menutitle, menufooter">
             <fontSize>0.03</fontSize>
-            <fontPath>./assets/fonts/dsi_font.otf</fontPath>
+            <fontPath>${themePath}/assets/fonts/dsi_font.otf</fontPath>
         </menuText>
 
         <menuTextSmall name="menutextsmall">
             <fontSize>0.03</fontSize>
-            <fontPath>./assets/fonts/dsi_font.otf</fontPath>
+            <fontPath>${themePath}/assets/fonts/dsi_font.otf</fontPath>
         </menuTextSmall>
 
         <menuGroup name="menugroup">
             <fontSize>0.03</fontSize>
-            <fontPath>./assets/fonts/dsi_font.otf</fontPath>
+            <fontPath>${themePath}/assets/fonts/dsi_font.otf</fontPath>
         </menuGroup>
     </view>
 </theme>
