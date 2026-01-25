@@ -13,6 +13,8 @@ A janky emulationstation theme for ROCKNIX meant to make the Anbernic RG DS or A
   - Either connect to your network share and put it in the `themes` folder
   - Or copy it to `/STORAGE/.config/emulationstation/themes/` directly
 3. Copy only the enable script for your device from the repository's `scripts` folder into your `roms/ports` folder
+  - !!! NOTE: If you downloaded the theme as a zip, you may need to re-enable execution on the `enable_theme_*.sh` script either
+              after extraction on your computer or on the device via ssh. Use `chmod +x enable_theme_*.sh` for either method.
 4. After updating your gamelists, open your ports section on your device and
   - Either run the enable script every time you want to enable the theme
     - (You will have to manually change the theme setting when you want to switch back)
