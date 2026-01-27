@@ -26,8 +26,12 @@ output DSI-2 bg #000000 solid_color
 output DSI-2 allow_tearing yes
 output DSI-2 max_render_time off
 for_window [title=".*(Secondary|\[w2\]|Sub|Bottom|Screen 2|GamePad).*"] move window to output DSI-1
+for_window [title="RetroArch\s(melonDS|DeSmuME|VecX|MAME|FinalBurn|FB Alpha).*"] exec /usr/lib/autostart/quirks/devices/"Anbernic RG DS"/bin/vertical-check
 for_window [app_id="drastic"] input "1046:911:Goodix_Capacitive_TouchScreen" map_to_output DSI-2
-for_window [app_id="emulationstation"] floating enable, fullscreen disable, move to output DSI-2
+for_window [app_id="emulationstation"] reload
+exec_always swaymsg '[app_id="emulationstation"]' floating enable, fullscreen disable, move to output DSI-2
+exec_always swaymsg '[app_id="emulationstation"]' seat "*" attach "*"
+exec_always swaymsg '[app_id="emulationstation"]' focus
 EOF
 
 swaymsg reload
