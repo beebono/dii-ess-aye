@@ -31,7 +31,6 @@ for_window [title=".*(Secondary|\[w2\]|Sub|Bottom|Screen 2|GamePad).*"] seat sea
 for_window [title="RetroArch\s(melonDS|DeSmuME|VecX|MAME|FinalBurn|FB Alpha).*"] exec /usr/lib/autostart/quirks/devices/"AYN Thor"/bin/vertical-check
 for_window [app_id="emulationstation"] reload
 exec_always swaymsg '[app_id="emulationstation"]' floating enable, fullscreen disable, move absolute position 0 0, move left 1240
-exec_always swaymsg '[app_id="emulationstation"]' seat "*" attach "*"
 exec_always swaymsg '[app_id="emulationstation"]' focus
 EOF
 

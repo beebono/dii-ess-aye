@@ -29,8 +29,7 @@ for_window [title=".*(Secondary|\[w2\]|Sub|Bottom|Screen 2|GamePad).*"] move win
 for_window [title="RetroArch\s(melonDS|DeSmuME|VecX|MAME|FinalBurn|FB Alpha).*"] exec /usr/lib/autostart/quirks/devices/"Anbernic RG DS"/bin/vertical-check
 for_window [app_id="drastic"] input "1046:911:Goodix_Capacitive_TouchScreen" map_to_output DSI-2
 for_window [app_id="emulationstation"] reload
-exec_always swaymsg '[app_id="emulationstation"]' floating enable, fullscreen disable, move to output DSI-2
-exec_always swaymsg '[app_id="emulationstation"]' seat "*" attach "*"
+exec_always swaymsg '[app_id="emulationstation"]' floating enable, fullscreen disable, move absolute position 0 0
 exec_always swaymsg '[app_id="emulationstation"]' focus
 EOF
 
