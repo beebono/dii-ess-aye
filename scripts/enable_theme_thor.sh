@@ -28,7 +28,7 @@ output DSI-2 allow_tearing yes
 output DSI-2 max_render_time off
 for_window [title=".*(Secondary|\[w2\]|Sub|Bottom|Screen 2|GamePad).*"] move window to output DSI-1
 for_window [title=".*(Secondary|\[w2\]|Sub|Bottom|Screen 2|GamePad).*"] seat seat0 attach "*"
-for_window [title="RetroArch\s(melonDS|DeSmuME|VecX|MAME|FinalBurn|FB Alpha).*"] exec /usr/lib/autostart/quirks/devices/"AYN Thor"/bin/vertical-check
+for_window [title="RetroArch\s(melonDS|DeSmuME|VecX|MAME|FinalBurn|FB Alpha).*"] exec /usr/bin/vertical-check
 for_window [app_id="emulationstation"] reload
 exec_always swaymsg '[app_id="emulationstation"]' floating enable, fullscreen disable, move absolute position 0 0, move left 1240
 exec_always swaymsg '[app_id="emulationstation"]' focus
