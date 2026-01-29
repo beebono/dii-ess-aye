@@ -1,13 +1,13 @@
-# DII-ESS-AYE
+## DII-ESS-AYE
 A janky emulationstation theme for ROCKNIX meant to make the Anbernic RG DS or AYN Thor feel a bit more like a chunky DSi.
 
-## Known Issues (that won't be fixed)
+# Known Issues (that won't be fixed)
 1. Keyboard and horizontally longer popups are incorrectly sized.
 2. Advanced Game Options is hidden.
   - Workaround by pressing your Advanced Game Options button twice.
 3. Slider setting bars are way too long.
 
-# Install
+### Install
 1. Download or clone this repository
 2. Copy the contents of this repository into your themes folder under a folder named `dii-ess-aye`
   - Either connect to your network share and put it in the `themes` folder
@@ -22,7 +22,7 @@ A janky emulationstation theme for ROCKNIX meant to make the Anbernic RG DS or A
     - Optionally, set the enable script's metadata Hidden option if you don't want it to clutter the ports
 5. Enjoy?
 
-# Uninstall
+### Uninstall
 1. If your enable script is set to auto start: Start Menu -> System Settings -> Frontend Developer Options -> Stop Running This Game At Startup
 2. Switch your theme back to SYSTEM-THEME: Start Menu -> User Inferface Settings -> Theme Set
 3. Reboot
@@ -33,7 +33,7 @@ A janky emulationstation theme for ROCKNIX meant to make the Anbernic RG DS or A
   4. Say "Yeah man, I wanna do it."
 5. Enjoy no longer...
 
-# Scraping Recommendations
+### Scraping Recommendations
 I recommend using Skraper and setting it to:
 - Generate a gamelist.xml
 - Scrape a miximage, linked to `<image>` node
@@ -46,10 +46,10 @@ that can automatically crop (hard cut to 256x256), squish (preserves image, comp
 or resize (preserves image and aspect ratio, shrinks to 256x256) your existing boxart or support textures.
 These can be run on your device after all gamelists, games, and images are in place.
 
-# Special Thanks!
+### Special Thanks!
 - Ant (https://github.com/anthonycaccese) for the status and slot icons and their implementation.
 - Jeod (https://github.com/JeodC) for help testing the Thor variant.
 - Zoidburg13 (https://github.com/Zoidburg13) for their wonderful system icons. 
 
-# Previews
+### Previews
 <img src="main_preview.jpeg" width="49%" /> <img src="game_preview.jpeg" width="49%" />
