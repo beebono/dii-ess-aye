@@ -1,12 +1,12 @@
 ## DII-ESS-AYE
-A janky emulationstation theme for ROCKNIX meant to make the Anbernic RG DS feel a bit more like a chunky DSi.
+A janky EmulationStation theme for ROCKNIX meant to make the Anbernic RG DS and AYN Thor feel a bit more like a chunky DSi.
 
 # Known Issues (that won't be fixed)
 1. Keyboard and horizontally longer popups are incorrectly sized.
 2. Advanced Game Options is hidden.
   - Workaround by pressing your Advanced Game Options button twice.
 3. Slider setting bars are way too long.
-4. AYN Thor implementation is broken. Might be fixed if I ever get one.
+4. The AYN Thor variant uses a deliberately offset 4400x1080 virtual canvas so EmulationStation's built-in Start and settings menus remain centered on the top screen. Do not replace its Thor launcher script with the RG DS one.
 
 ### Install
 1. Download or clone this repository
@@ -22,6 +22,9 @@ A janky emulationstation theme for ROCKNIX meant to make the Anbernic RG DS feel
   - Or set the enable script to run at launch by opening the Advanced Game Options and turning on that option
     - Optionally, set the enable script's metadata Hidden option if you don't want it to clutter the ports
 5. Enjoy?
+
+### AYN Thor
+Use `enable_theme_thor.sh` from the `scripts` directory. It configures the rotated DSI-2 top panel and DSI-1 bottom panel, then launches EmulationStation on the Thor-specific virtual canvas. The theme includes a larger, 48px-equivalent top status bar so it remains legible on the top display.
 
 ### Uninstall
 1. If your enable script is set to auto start: Start Menu -> System Settings -> Frontend Developer Options -> Stop Running This Game At Startup
@@ -51,6 +54,7 @@ These can be run on your device after all gamelists, games, and images are in pl
 - Ant (https://github.com/anthonycaccese) for the status and slot icons and their implementation.
 - Jeod (https://github.com/JeodC) for help testing the Thor variant.
 - Zoidburg13 (https://github.com/Zoidburg13) for their wonderful system icons. 
+- Valve for the Steam logo, sourced from Wikimedia Commons.
 
 ### Previews
 <img src="main_preview.jpeg" width="49%" /> <img src="game_preview.jpeg" width="49%" />
