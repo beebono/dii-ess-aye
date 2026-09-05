@@ -22,16 +22,27 @@ seat * hide_cursor 1000
 default_border none
 exec_always mako
 output DSI-2 transform 90
-output DSI-2 mode 1080x1240@120.000000Hz
+output DSI-2 position 0 0
 output DSI-2 bg #000000 solid_color
 output DSI-2 allow_tearing yes
 output DSI-2 max_render_time off
+output DSI-1 transform 90
+output DSI-1 position 1920 0
+output DSI-1 bg #000000 solid_color
+output DSI-1 power on
+output DSI-1 allow_tearing yes
+output DSI-1 max_render_time off
+# Let EmulationStation keep its 4400px-wide virtual surface: the first 1240px
+# are intentionally off-screen so built-in menus are centered on DSI-2.
+floating_maximum_size 4400 x 1080
 for_window [title=".*(Secondary|\[w2\]|Sub|Bottom|Screen 2|GamePad).*"] move window to output DSI-1
 for_window [title=".*(Secondary|\[w2\]|Sub|Bottom|Screen 2|GamePad).*"] seat seat0 attach "*"
 for_window [title="RetroArch\s(melonDS|DeSmuME|VecX|MAME|FinalBurn|FB Alpha).*"] exec /usr/bin/vertical-check
-for_window [app_id="emulationstation"] reload
-exec_always swaymsg '[app_id="emulationstation"]' floating enable, fullscreen disable, move absolute position 0 0, move left 1240
-exec_always swaymsg '[app_id="emulationstation"]' focus
+for_window [app_id="emulationstation"] floating enable
+for_window [app_id="emulationstation"] fullscreen disable
+for_window [app_id="emulationstation"] resize set 4400 1080
+for_window [app_id="emulationstation"] move absolute position -1240 0
+for_window [app_id="emulationstation"] focus
 EOF
 
 swaymsg reload

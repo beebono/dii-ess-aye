@@ -45,9 +45,9 @@
         <!-- Start: System Indicators -->
         <stackpanel name="system-indicators-left,system-indicators-right" extra="true">
             <w>0.423</w><!-- 620 -->
-            <h>0.025</h><!-- 27 -->
-            <separator>5</separator>
-            <pos>0.2886 0.0074</pos><!-- 10 8 -->
+            <h>0.0556</h><!-- 60 -->
+            <separator>20</separator>
+            <pos>0.2886 0.01</pos><!-- 10 11 -->
         </stackpanel>
         <stackpanel name="system-indicators-left" extra="true">
             <orientation>horizontal</orientation>
@@ -55,7 +55,7 @@
             <clock name="system-clock">
                 <color>333333FF</color>
                 <fontPath>${themePath}/assets/fonts/dsi_font.otf</fontPath>
-                <fontSize>0.013</fontSize><!-- 14 -->
+                <fontSize>0.0444</fontSize><!-- 48 -->
                 <lineSpacing>1</lineSpacing>
             </clock>
         </stackpanel>
@@ -65,7 +65,7 @@
             <batteryText name="system-battery-text">
                 <color>333333FF</color>
                 <fontPath>${themePath}/assets/fonts/dsi_font.otf</fontPath>
-                <fontSize>0.013</fontSize><!-- 14 -->
+                <fontSize>0.0444</fontSize><!-- 48 -->
                 <lineSpacing>1</lineSpacing>
             </batteryText>
             <batteryIcon name="system-battery-icon">
@@ -166,10 +166,12 @@
         <!-- Bottom screen (X 0.7182-1.0) -->
         <carousel name="systemcarousel">
             <type>horizontal</type>
-            <pos>0.859 0.64</pos>
+            <pos>0.859 0.630</pos>
             <origin>0.5 0.5</origin>
             <size>0.282 0.25</size>
-            <logoSize>0.1 0.17</logoSize>
+            <!-- Render the unmodified 256px system artwork at 115px square. -->
+            <!-- The slot overlay below is scaled independently to retain the DSi card size. -->
+            <logoSize>0.0364 0.1063</logoSize>
             <logoScale>1</logoScale>
             <color>00000000</color>
             <maxLogoCount>5</maxLogoCount>
@@ -217,7 +219,8 @@
             <path>${themePath}/assets/images/systems/${system.theme}.png</path>
             <image name="menu_slot" extra="true">
                 <path>${themePath}/assets/images/common/menu_slot.png</path>
-                <scale>1.45</scale>
+                <!-- Compensates for the smaller artwork layer while preserving the card geometry. -->
+                <scale>1.84</scale>
                 <scaleOrigin>0.5 0.35</scaleOrigin>
             </image>
             <storyboard>
