@@ -44,9 +44,9 @@
         <!-- Start: System Indicators -->
         <stackpanel name="system-indicators-left,system-indicators-right" extra="true">
             <w>0.589</w><!-- 1860 -->
-            <h>0.025</h><!-- 27 -->
-            <separator>5</separator>
-            <pos>0.0095 0.0074</pos><!-- 30 8 -->
+            <h>0.0556</h><!-- 60 -->
+            <separator>20</separator>
+            <pos>0.0095 0.01</pos><!-- 30 11 -->
         </stackpanel>
         <stackpanel name="system-indicators-left" extra="true">
             <orientation>horizontal</orientation>
@@ -54,7 +54,7 @@
             <clock name="system-clock">
                 <color>333333FF</color>
                 <fontPath>${themePath}/assets/fonts/dsi_font.otf</fontPath>
-                <fontSize>0.013</fontSize><!-- 14 -->
+                <fontSize>0.0444</fontSize><!-- 48 -->
                 <lineSpacing>1</lineSpacing>
             </clock>
         </stackpanel>
@@ -64,7 +64,7 @@
             <batteryText name="system-battery-text">
                 <color>333333FF</color>
                 <fontPath>${themePath}/assets/fonts/dsi_font.otf</fontPath>
-                <fontSize>0.013</fontSize><!-- 14 -->
+                <fontSize>0.0444</fontSize><!-- 48 -->
                 <lineSpacing>1</lineSpacing>
             </batteryText>
             <batteryIcon name="system-battery-icon">
